@@ -1,0 +1,449 @@
+body{
+  margin: 0;
+  font-size: 14px;
+ font-family: 'Raleway', sans-serif;
+ color: #000000;
+ -webkit-font-smoothing: antialiased; /*сглаживание шрифтов*/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+/*container*/
+
+.container{
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/*header*/
+.header {
+width: 100%; /* навигация была поверх картинки*/
+position: absolute; /* навигация была поверх картинки*/
+top: 0;/* навигация была поверх картинки*/
+left: 0;/* навигация была поверх картинки*/
+z-index: 1000;/* навигация была поверх картинки*/
+height: 100px; /* высота шапки*/
+}
+
+
+.header.fixed{
+  height: auto;
+  position: fixed;
+  background-color: #62168b;
+}
+
+.header.fixed .header__inner{
+  border-bottom: 0px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.header__inner{
+display: flex;
+justify-content: space-between;
+border-bottom: 1px solid #FFF;
+padding: 29px 0;
+align-items: center;
+
+
+}
+.header__title{
+  font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+ font-weight: bold; /*толщина букв*/
+ text-decoration: none; /*убрать подчеркивание*/
+ color: #fff;
+ text-transform: uppercase;
+
+}
+
+.nav{
+  display: flex;
+text-transform: uppercase; /* включить большие букв*/
+
+}
+
+.nav__link{
+margin-left: 68px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+ font-weight: bold; /*толщина букв*/
+ text-decoration: none; /*убрать подчеркивание*/
+ opacity: 0.75; /*прозрачность текста*/
+ transition: opacity 0.1s linear; /* плавный переход opacity*/
+}
+.nav__link:hover{
+  opacity: 1; /* при наводе прозрачность текста*/
+
+  text-decoration: underline;  /*при наводе на слово подчеркивание будет*/
+}
+
+
+/*intro*/
+.intro{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 750px;
+  background: url("img/1.png") center ;/*cover всю ширину и высоту блока */
+  background-size: cover;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.intro__inner{
+  width: 100%;
+  max-width: 830px;
+  margin: 0 auto;
+}
+.intro__title{
+  margin: 0 0 30px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  color: #fff;
+  font-weight: bold; /*толщина букв*/
+  text-transform: uppercase; /* включить большие букв*/
+    text-align: center; /* выравнивание текста по (центру)*/
+    line-height: 71px; /* межстрочный отступ*/
+
+}
+
+
+/*btn*/
+
+
+.btn{
+
+  display: inline-block; /*блочный элемент, который обтекается другими элементами веб-страницы подобно встроенному элементу*/
+  vertical-align: top; /* выравнивание по вертикальной границы*/
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase; /* включить большие букв*/
+  padding: 19px 60px;
+  border-radius: 30px;/* закругление границ*/
+  transition: background .1s liner; /* плавный переход back*/
+}
+
+.btn--r{
+  background-color: #612581;
+  text-decoration: none;
+}
+
+.btn--r:hover{
+  background-color: #8933b8;
+
+}
+
+
+.about__us{
+  height: 280px;
+  width: 100%;
+  background-color: #62168b;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+
+
+}
+.about__us__t{
+  margin: 50px 80px;
+
+}
+
+.about__us__title{
+padding-bottom: 20px;
+font-family: 'Roboto', sans-serif;
+font-size: 30px;
+font-weight: bold; /*толщина букв*/
+text-transform: uppercase; /* включить большие букв*/
+  text-align: center; /* выравнивание текста по (центру)*/
+
+
+}
+
+.about__us__text{
+padding-left: 40px;
+padding-right: 40px;
+font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: bold; /*толщина букв*/
+
+    text-align: center; /* выравнивание текста по (центру)*/
+    line-height: 20px;
+
+}
+
+
+.works{
+  margin-top: 100px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+}
+
+.works__item{
+  display: flex;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  width: 361px;
+  height: 401px;
+
+
+  position: relative;
+ overflow: hidden;  /*скрываем все что будет вылезать за приделы нашего блока*/
+
+}
+.works__item:hover .works__contenet {
+  opacity: 0.8;
+
+
+}
+
+
+.works__img{
+position: absolute;
+left: 50%;
+top: 50%;
+z-index: 1;
+transform: translate3d(-50%, -50%, 0);
+}
+
+
+.works__contenet{
+display: flex;
+  flex-direction: column; /*новый элемент с новой строки*/
+justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  background-color: rgb(97, 37, 129);
+  position: absolute;
+  top:0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity .4s linear;
+        padding: 20px 10px;
+}
+
+
+.works__title{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  line-height: 10px;
+  margin-bottom: 15px;
+}
+.works__text{
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 19px;
+
+
+}
+
+
+
+
+
+.interior__design{
+height: 795px;
+
+
+
+
+}
+
+.interior__title{
+  background-color: #62168b;
+  padding-bottom: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+.interior__img{
+width: 100%;
+}
+
+.slick-dots{
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0 0 10px;
+  list-style: none;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+}
+
+
+.slick-dots li{
+  margin: 0 2px;
+}
+.slick-dots button{
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  border: 0;
+  opacity: 0.5;
+  cursor: pointer;
+
+  padding: 0;
+  font-size: 0;
+  color: transparent;
+
+}
+
+.slick-dots button:focus{
+  outline: 0;
+}
+
+.slick-dots .slick-active button {
+opacity: 0.8;
+}
+
+
+
+.onlain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 750px;
+  background: url("img/50.jpg") center ;/*cover всю ширину и высоту блока */
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+}
+.onlain__title{
+  padding-bottom: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+
+}
+
+
+.btnr{
+
+  display: inline-block; /*блочный элемент, который обтекается другими элементами веб-страницы подобно встроенному элементу*/
+  vertical-align: top; /* выравнивание по вертикальной границы*/
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  color: #fff;
+  line-height: 21px;
+  font-weight: 700;
+  text-transform: uppercase; /* включить большие букв*/
+  padding: 19px 60px;
+  border-radius: 30px;/* закругление границ*/
+  transition: background .1s liner; /* плавный переход back*/
+}
+
+.btnr--rr{
+  background-color: #612581;
+  text-decoration: none;
+}
+
+.btnr--rr:hover{
+  background-color: #8933b8;
+
+}
+
+
+.footer{
+  background-color: #62168b;
+  color: #fff;
+
+}
+
+.footer__iner{
+  padding: 40px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+
+
+.footer__blok{
+width: 33.333%;
+text-align: center;
+
+}
+.so{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img__face{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin-right: 4px;
+  background-color: #62168b;
+  border: 1px solid #fff;
+  transition: background 0.1s linear;
+}
+
+.img__face:hover {
+  border-color: #fff;
+}
+
+.img__face:hover .social__iconq {
+  fill: #62168b;
+  background-color: #fff;
+}
+
+.social__iconq{
+  display: block;
+  height: 18px;
+
+  fill: #fff;
+  transition: fill .1s linear;
+}
+
+
+.stock__titile{
+  padding-top: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+text-align: center;
+}
+
+
+.stock__address{
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+text-align: center;
+}

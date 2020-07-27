@@ -1,0 +1,81 @@
+body{
+  margin: 0;
+  font-size: 14px;
+ font-family: 'Raleway', sans-serif;
+ color: #000000;
+ -webkit-font-smoothing: antialiased; /*сглаживание шрифтов*/
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: 0;
+}
+/*container*/
+
+.container{
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+/*header*/
+.header {
+
+width: 100%; /* навигация была поверх картинки*/
+position: absolute; /* навигация была поверх картинки*/
+top: 0;/* навигация была поверх картинки*/
+left: 0;/* навигация была поверх картинки*/
+z-index: 1000;/* навигация была поверх картинки*/
+height: 100px; /* высота шапки*/
+margin-bottom: 100px;
+}
+
+
+
+
+
+.header__inner{
+
+  background-color: #612581;
+display: flex;
+justify-content: space-between;
+border-bottom: 1px solid #FFF;
+padding: 29px 0;
+align-items: center;
+
+
+}
+.header__title{
+  font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+ font-weight: bold; /*толщина букв*/
+ text-decoration: none; /*убрать подчеркивание*/
+ color: #fff;
+ text-transform: uppercase;
+
+}
+
+.nav{
+  display: flex;
+text-transform: uppercase; /* включить большие букв*/
+
+}
+
+.nav__link{
+margin-left: 68px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+ font-weight: bold; /*толщина букв*/
+ text-decoration: none; /*убрать подчеркивание*/
+ opacity: 0.75; /*прозрачность текста*/
+ transition: opacity 0.1s linear; /* плавный переход opacity*/
+}
+.nav__link:hover{
+  opacity: 1; /* при наводе прозрачность текста*/
+  text-decoration: underline;  /*при наводе на слово подчеркивание будет*/
+}
